@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :group_type %>
-    <%= form.number_field :group_type %>
+    <%= form.select :group_type, options_for_select(Group.group_types.keys) %>
   </div>
 
   <div class="field">

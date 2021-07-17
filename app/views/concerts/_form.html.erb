@@ -26,6 +26,16 @@
     <%= form.text_field :location %>
   </div>
 
+  <div class="field">
+    <%= form.label :group_id %>
+    <%= form.select :group_id, options_for_select(Group.pluck :name, :id) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attendance %>
+    <%= form.number_field :attendance %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

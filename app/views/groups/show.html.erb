@@ -20,5 +20,25 @@
   <%= @group.cast %>
 </p>
 
+<table class="table">
+  <thead>
+  <tr>
+    <th>Concerts this month</th>
+    <th>Last concert</th>
+    <th>Max attendance</th>
+    <th>Longest concert</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @group.concertThisMonth%></td>
+      <td><%= @group.lastConcert %></td>
+      <td><%= @group.maxAttendance %></td>
+      <td><%= @group.longestConcert %></td>
+    </tr>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
